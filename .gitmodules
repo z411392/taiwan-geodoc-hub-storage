@@ -1,0 +1,3 @@
+[submodule "src/taiwan_geodoc_hub/modules/registration_managing/domain/services"]
+	path = src/taiwan_geodoc_hub/modules/registration_managing/domain/services
+	url = git@github.com:z411392/taiwan-geodoc-hub-registration-extractor.git

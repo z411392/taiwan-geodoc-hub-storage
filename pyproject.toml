@@ -1,0 +1,59 @@
+[project]
+dependencies = [
+  "firebase_functions",
+  "injector",
+  "shortuuid",
+  "pymupdf",
+  "python-dotenv",
+  "starlette",
+  "vellox",
+  "pyppeteer",
+  "uvicorn",
+  "aiofiles",
+  "httpx",
+  "asgi-lifespan",
+  "typer",
+  "google-cloud-pubsub",
+  "dacite",
+  "reactivex",
+]
+description = ""
+name = "taiwan-geodoc-hub"
+requires-python = ">=3.13,<3.14"
+version = "0.1.0"
+
+[tool.uv]
+dev-dependencies = [
+  "pytest",
+  "pytest-testdox",
+  "pytest-dotenv",
+  "pytest-asyncio",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = [
+  "-v",
+  "-s",
+  "--testdox",
+  "--capture=no",
+  "--tb=long",
+]
+filterwarnings = [
+  "ignore::pytest.PytestAssertRewriteWarning",
+  "ignore:builtin type SwigPyPacked has no __module__ attribute",
+  "ignore:builtin type SwigPyObject has no __module__ attribute",
+  "ignore:builtin type swigvarlink has no __module__ attribute",
+  "ignore::DeprecationWarning:reactivex.*",
+]
+norecursedirs = [
+  ".*",
+  "build",
+  "dist",
+  "*.egg",
+  "info",
+]
+python_files = [
+  "test_*.py",
+]
+pythonpath = ["./src"]
