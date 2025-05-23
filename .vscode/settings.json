@@ -1,0 +1,4 @@
+{
+    "python.venvPath": "src/venv",
+    "python.defaultInterpreterPath": "src/venv/bin/python3"
+}
